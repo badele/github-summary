@@ -1,0 +1,34 @@
+The {{ g.get_user().name }} on github since {{ g.get_user().created_at }} lives in {{ g.get_user().location }} last seen at {{ g.get_user().updated_at }} and have {{ g.get_user().followers }} followers
+
+This user have {{ coountrepos }} github projects of which created {{ owner|length }} projects and contribute to {{ contrib|length }} projects 
+
+{{ g.get_user().name }} develop primarily with {% for key, value in languages.iteritems() %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
+
+Repos owner summary
+===================
+
+{% for repo in owner %}
+{{ repo.name|lower }}{% if repo.watchers or repo.forks %} - {% endif %}{% if repo.watchers > 0 %}{{ repo.watchers }} watchers{% endif %}{% if repo.forks > 0 %}, {{ repo.forks }} forks{% endif %}
+--------------------------------------------------------------------
+{{ repo.description }}
+{% endfor %}
+
+
+Author Summary
+==============
+
+login: {{ g.get_user().login }}
+html_url: {{ g.get_user().html_url }}
+avatar_url: {{ g.get_user().avatar_url }}
+name: {{ g.get_user().name }}
+company: {{ g.get_user().company }}
+blog: {{ g.get_user().blog }}
+location: {{ g.get_user().location }}
+email: {{ g.get_user().email }}
+hireable: {{ g.get_user().hireable }}
+bio: {{ g.get_user().bio }}
+public_repos: {{ g.get_user().public_repos }}
+followers: {{ g.get_user().followers }}
+following: {{ g.get_user().following }}
+created_at: {{ g.get_user().created_at }}
+updated_at: {{ g.get_user().updated_at }}

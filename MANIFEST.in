@@ -1,0 +1,5 @@
+include README.rst
+include LICENSE
+include githubsummary/githubsummary
+recursive-include githubsummary/templates *.rst *.txt
+recursive-include githubsummary/tools *

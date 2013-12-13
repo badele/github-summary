@@ -1,0 +1,102 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+__authors__ = 'Bruno Adelé <bruno@adele.im>'
+__copyright__ = 'Copyright (C) 2013 Bruno Adelé'
+__description__ = """A basic converter Org file to JSON file"""
+__license__ = 'GPLv3'
+__version__ = '1.0'
+
+import os
+import re
+import sys
+import json
+import argparse
+
+ORGFILTER = r"#\+BEGIN: clocktable :maxlevel 2 :scope file(.*?)#\+END:"
+
+
+def convert(args):
+    """Convert Orgfile to JSONfile"""
+    times = extractTimes(args)
+    saveToJSON(args.saveto, times)
+
+
+def extractTimes(args):
+    """Extract project time from Org file"""
+    times = {}
+    orgfile = os.path.abspath(args.orgfile)
+    if not os.path.isfile(orgfile):
+        return None
+
+    # Open orgfile
+    lines = open(orgfile).read()
+    m = re.search(ORGFILTER, lines, flags=re.MULTILINE | re.DOTALL)
+    if m:
+        projects = m.group(1)
+        matchall = re.findall(r'\\__ ([^ ]+) +\| +\| +([0-9]+):[0-9]+ \|', projects)
+        if matchall:
+            for m in matchall:
+                times[m[0]] = m[1]
+
+        return times
+
+
+def saveToJSON(filename, datas):
+    """Save array to JSON"""
+    jsondatas = json.dumps(datas, indent=4)
+    out = open(filename, 'wb')
+    out.write(jsondatas)
+    out.close()
+
+
+def parse_arguments():
+    """Parse the arguments"""
+
+    parser = argparse.ArgumentParser(
+        description=__description__,
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+
+    parser.add_argument(
+        '-o', '--orgfile',
+        action='store',
+        dest='orgfile',
+        default=None,
+        help='Org file'
+    )
+
+    parser.add_argument(
+        '-s', '--saveto',
+        action='store',
+        dest='saveto',
+        help='Save to'
+    )
+
+    parser.add_argument(
+        '-v', '--version',
+        action='version',
+        version='%(prog)s {version}'.format(version=__version__)
+    )
+
+    a = parser.parse_args()
+
+    if not a.orgfile not in a:
+        print "Please indicate org filename"
+        sys.exit(1)
+
+    if not a.saveto not in a:
+        print "Please indicate filename to save"
+        sys.exit(1)
+
+    return a
+
+
+def main():
+    # Parse arguments
+    args = parse_arguments()
+
+    convert(args)
+
+if __name__ == '__main__':
+    main()
