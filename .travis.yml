@@ -5,4 +5,4 @@ python:
 install:
   - pip install . --use-mirrors
 
-script: ./test.py
+script: python setup.py test
