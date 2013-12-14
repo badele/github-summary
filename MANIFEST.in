@@ -1,5 +1,5 @@
 include README.rst
 include LICENSE
-include githubsummary/githubsummary
+include tests.py
 recursive-include githubsummary/templates *.rst *.txt
 recursive-include githubsummary/tools *

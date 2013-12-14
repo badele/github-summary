@@ -44,6 +44,8 @@ My projects
 
 **Languages repartitions:** {% for key, value in reposlanguages.iteritems() %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
 
+This page is generated with `github-summary`_ project
+
 Contact me
 ----------
 
@@ -67,3 +69,4 @@ Contact me
 
 .. _blog jesuislibre: http://blog.jesuislibre.org
 .. _blog cendreo: http://blog.cendreo.com
+.. _github-summary: https://github.com/badele/github-summary

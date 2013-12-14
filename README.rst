@@ -1,3 +1,6 @@
+.. image:: https://travis-ci.org/badele/github-summary.png?branch=master
+        :target: https://travis-ci.org/badele/github-summary
+
 About
 =====
 
@@ -33,6 +36,8 @@ You can also use the tools, ex: Emacs Org file to JSON file (projects contribute
 
    org2json -o project.org -s example_projects.json
 
-You can see a `example <https://github.com/badele/github-summary/example.rst>`_ result or this picture
+You can see a `example <https://github.com/badele/github-summary/blob/master/example.rst>`_ result or this picture
 
-![github summary capture](http://bruno.adele.im/static/github-summary.png)
+.. image:: http://bruno.adele.im/static/github-summary.png
+
+You can also see the result directely in my personnal `website <http://bruno.adele.im>`_ 

@@ -31,11 +31,11 @@ execfile(configfile)
 def generateSummary(args):
     """Generate github summary"""
 
-    pydir = os.path.dirname(os.path.realpath(__file__))
+    checkdir = os.path.dirname(os.path.realpath(__file__))
 
     # Check if template exists
     tplfile = os.path.abspath("%s/templates/%s" % (
-        pydir,
+        checkdir,
         args.template)
     )
 
@@ -49,9 +49,9 @@ def generateSummary(args):
 
     # Clocktable
     clocktable = None
+    total_contribute = 0
     if args.jsonfile:
         clocktable = openJSONFile(args.jsonfile)
-        total_contribute = 0
         for key, value in clocktable.iteritems():
             total_contribute += int(value)
 
@@ -87,8 +87,8 @@ def generateSummary(args):
             'contrib': contrib,
             'countrepos': countrepos,
             'reposlanguages': reposlanguages,
-            'ownerlanguages': reposlanguages,
-            'contriblanguages': reposlanguages,
+            'ownerlanguages': ownerlanguages,
+            'contriblanguages': contriblanguages,
             'clocktable': clocktable,
             'total_contribute': total_contribute,
         }
@@ -125,17 +125,14 @@ def convertPercent(obj):
 def summaryLanguages(repos, countbyte=False):
     """Analyse repos language and sort mos used language"""
     langs = defaultdict(float)
-    total = 0
 
     for r in repos:
         for lang, value in r.get_languages().iteritems():
             if lang not in LANGUAGE_IGNORE:
                 if countbyte:
                     langs[lang] += value
-                    total += value
                 else:
                     langs[lang] += 1
-                    total += 1
 
     return dict(Counter(langs).most_common(LANGUAGE_NB))
 
@@ -163,16 +160,16 @@ def sortReposBypopularity(repos):
     )
 
 
-def parse_arguments():
+def parse_arguments(cmdline=""):
     """Parse the arguments"""
 
     # Template default value
     tplfile = None
-    pydir = os.path.dirname(os.path.realpath(__file__))
+    checkdir = os.path.dirname(os.path.realpath(__file__))
 
     # Check if template exists
     checkfile = os.path.abspath("%s/templates/%s" % (
-        pydir,
+        checkdir,
         DEFAULT_TEMPLATE)
     )
 
@@ -221,14 +218,13 @@ def parse_arguments():
         version='%(prog)s {version}'.format(version=__version__)
     )
 
-    a = parser.parse_args()
+    a = parser.parse_args(cmdline)
 
-    # TODO: make unit test for testing default values
     if not a.template:
         print "Please indicate the template file"
         sys.exit(1)
 
-    if not a.saveto not in a:
+    if not a.saveto:
         print "Please indicate filename to save"
         sys.exit(1)
 
@@ -237,7 +233,7 @@ def parse_arguments():
 
 def main():
     # Parse arguments
-    args = parse_arguments()
+    args = parse_arguments(sys.argv[1:])
 
     # Generate github summary
     generateSummary(args)

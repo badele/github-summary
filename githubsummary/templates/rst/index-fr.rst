@@ -43,6 +43,8 @@ Mes projets
 
 **Répartition des languages:** {% for key, value in reposlanguages.iteritems() %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
 
+Cette page a été généré avec le projet `github-summary`_
+
 Me contacter
 ------------
 
@@ -65,3 +67,4 @@ Me contacter
 
 .. _blog jesuislibre: http://blog.jesuislibre.org
 .. _blog cendreo: http://blog.cendreo.com
+.. _github-summary: https://github.com/badele/github-summary

@@ -23,7 +23,7 @@ setup(
     long_description=read('README.rst'),
     author='Bruno Adelé',
     author_email='bruno@adele.im',
-    url='http://bruno.adele.im/',
+    url='https://github.com/badele/github-summary',
     license='GPL',
     install_requires=[
         'jinja2',
@@ -31,6 +31,7 @@ setup(
     ],
     setup_requires=[],
     tests_require=[],
+    test_suite='tests',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,

@@ -12,18 +12,31 @@ help:
 	@echo '   make install          Install package                             '
 	@echo '                                                                     '
 
-install: 
-	@python setup.py install
-
 doc:
-	./githubsummary/tools/org2json -o /LIVE/documents/project.org -s ./example_projects.json
-	./githubsummary/githubsummary.py -t rst/index-en.rst -j ./example_projects.json -s ./example.rst
+	@echo 'Generating a example documentation'
+	@./githubsummary/tools/org2json -o /LIVE/documents/project.org -s ./example_projects.json
+	@./githubsummary/githubsummary.py -t rst/index-en.rst -j ./example_projects.json -s ./example.rst
+
+build: 
+	@echo 'Running build'
+	@python setup.py build
+
+test: 
+	@echo 'Running test suite'
+	@./githubsummary/tools/org2json -o /LIVE/documents/project.org -s ./example_projects.json
+	@python setup.py test
 
 dist:
 	@echo 'Generating a distributable python package'
 	@python setup.py sdist
 	@echo 'Done'
 
+install: 
+	@echo 'Running install'
+	@python setup.py install
+
 clean:
-	rm -fr $(DISTDIR)
-	rm -fr $(BUILDDIR)
+	@rm -fr $(DISTDIR)
+	@rm -fr $(BUILDDIR)
+
+.PHONY: help doc build test dist install clean 

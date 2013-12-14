@@ -13,7 +13,7 @@ Self-taught, I learned various technology to guide me to the managements systems
 
 My strength, being constantly listen technologies evolutions and use a technologies will be apport a simplicity and max performances. 
 
-I also love the Opensource Software, in the last time, i have contributed **377 hours**.
+I also love the Opensource Software, in the last time, i have contributed **381 hours**.
 
 My blogs
 ---------
@@ -51,7 +51,7 @@ My projects
 - `JobCatcher`_ contribute **108 hours** (8 users, 4 forks)
 - `fabrecipes`_ contribute **89 hours** (5 users, 1 forks)/ A recipes for Fabric & Fabtools
 - `garchdeps`_ (3 users)/ Tool that show graphical dependencies of the archlinux packages
-- `github-summary`_ contribute **18 hours** / Python tool for generate github summary in multiple formats
+- `github-summary`_ contribute **22 hours** / Python tool for generate github summary in multiple formats
 - `bruno.adele.im`_ / code du site web bruno.adele.im
 - `blog.jesuislibre.org`_ / source du blog jesuislibre.org
 - `pelican-theme-jesuislibre`_ / jesuislibre pelican theme
@@ -61,7 +61,9 @@ My projects
 - `fdedup`_ / Find a duplicate files and delete or move
 - `jsl-tools`_ / Diverse tools from jesuislibre website
 
-**Languages repartitions:** Python (43%), Shell (23%), CSS (14%), JavaScript (9%), Emacs Lisp (3%), C++ (3%), Perl (3%), Ruby (3%)
+**Languages repartitions:** Python (44%), Shell (22%), CSS (14%), JavaScript (8%), Emacs Lisp (3%), C++ (3%), Perl (3%), Ruby (3%)
+
+This page is generated with `github-summary`_ project
 
 Contact me
 ----------
@@ -105,3 +107,4 @@ Contact me
 
 .. _blog jesuislibre: http://blog.jesuislibre.org
 .. _blog cendreo: http://blog.cendreo.com
+.. _github-summary: https://github.com/badele/github-summary
