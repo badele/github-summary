@@ -22,8 +22,8 @@ from collections import Counter, defaultdict, OrderedDict
 if os.path.isfile(os.path.expanduser("~/.github-summary.py")):
     configfile = os.path.expanduser("~/.github-summary.py")
 else:
-    pydir = os.path.dirname(os.path.realpath(__file__))
-    configfile = "%s/config.py" % pydir
+    pydir = os.path.dirname(os.path.realpath(__file__))  # pragma: no cover
+    configfile = "%s/config.py" % pydir  # pragma: no cover
 
 execfile(configfile)
 
@@ -31,17 +31,21 @@ execfile(configfile)
 def generateSummary(args):
     """Generate github summary"""
 
-    checkdir = os.path.dirname(os.path.realpath(__file__))
+    if not args.saveto:
+        print "Please indicate filename to save"
+        sys.exit(1)
+
+    tplfile = args.template
+    if not tplfile:
+        tplfile = DEFAULT_TEMPLATE
 
     # Check if template exists
-    tplfile = os.path.abspath("%s/templates/%s" % (
-        checkdir,
-        args.template)
-    )
-
-    # Search if relative template path
     if not os.path.isfile(tplfile):
-        tplfile = args.template
+        checkdir = os.path.dirname(os.path.realpath(__file__))
+        tplfile = os.path.abspath("%s/templates/%s" % (
+            checkdir,
+            tplfile)
+        )
 
     if not os.path.isfile(tplfile):
         print "%s template not found" % tplfile
@@ -163,19 +167,6 @@ def sortReposBypopularity(repos):
 def parse_arguments(cmdline=""):
     """Parse the arguments"""
 
-    # Template default value
-    tplfile = None
-    checkdir = os.path.dirname(os.path.realpath(__file__))
-
-    # Check if template exists
-    checkfile = os.path.abspath("%s/templates/%s" % (
-        checkdir,
-        DEFAULT_TEMPLATE)
-    )
-
-    if os.path.isfile(checkfile):
-        tplfile = DEFAULT_TEMPLATE
-
     parser = argparse.ArgumentParser(
         description=__description__,
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
@@ -201,7 +192,7 @@ def parse_arguments(cmdline=""):
         '-t', '--template',
         action='store',
         dest='template',
-        default=tplfile,
+        default=None,
         help='Template file'
     )
 
@@ -219,25 +210,16 @@ def parse_arguments(cmdline=""):
     )
 
     a = parser.parse_args(cmdline)
-
-    if not a.template:
-        print "Please indicate the template file"
-        sys.exit(1)
-
-    if not a.saveto:
-        print "Please indicate filename to save"
-        sys.exit(1)
-
     return a
 
 
 def main():
     # Parse arguments
-    args = parse_arguments(sys.argv[1:])
+    args = parse_arguments(sys.argv[1:])  # pragma: no cover
 
     # Generate github summary
-    generateSummary(args)
+    generateSummary(args)  # pragma: no cover
 
 
 if __name__ == '__main__':
-    main()
+    main()  # pragma: no cover

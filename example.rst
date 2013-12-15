@@ -47,7 +47,7 @@ My contributions
 My projects
 -----------
 
-- `gitcheck`_ contribute **15 hours** (24 users, 6 forks)/ Check multiple git repository in one pass / Vérifiez vos dépôt git en une seule passe
+- `gitcheck`_ contribute **15 hours** (25 users, 6 forks)/ Check multiple git repository in one pass / Vérifiez vos dépôt git en une seule passe
 - `JobCatcher`_ contribute **108 hours** (8 users, 4 forks)
 - `fabrecipes`_ contribute **89 hours** (5 users, 1 forks)/ A recipes for Fabric & Fabtools
 - `garchdeps`_ (3 users)/ Tool that show graphical dependencies of the archlinux packages
