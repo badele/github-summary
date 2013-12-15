@@ -116,6 +116,8 @@ def openJSONFile(filename):
 
     f = open(jsonfile)
 
+    print "SIZE: %s" % os.path.getsize(jsonfile)
+
     print "TYPE1: %s" % type(open)
     print "TYPE2: %s" % type(f)
     print "TYPE3: %s" % f.tell()
