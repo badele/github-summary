@@ -48,7 +48,6 @@ coverage:
 	@coverage erase
 	@coverage run --rcfile=coverage.rc tests.py
 	@coverage html
-	@echo
 	@coverage report --rcfile=coverage.rc
 
 clean:
