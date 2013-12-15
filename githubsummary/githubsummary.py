@@ -114,10 +114,21 @@ def openJSONFile(filename):
         print "FILE NOT FOUND"
         return None
 
+
+    json_data = open(jsonfile)
+
     print "TYPE1: %s" % type(open)
     print "TYPE2: %s" % type(open(jsonfile))
     print "TYPE2: %s" % type(open(jsonfile).read())
-    json_data = open(jsonfile)
+
+    print "JSON1: %s" % type(json)
+    print "JSON2: %s" % type(json.load(json_data))
+    print "JSON3: %s" % json.__version__
+    print "JSON4: %s" % repr(json)
+    json_data.seek(0)
+
+
+
     data = json.load(json_data)
     print json_data.seek(0)
     print "DATA: %s" % data
