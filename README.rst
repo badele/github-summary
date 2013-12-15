@@ -1,5 +1,10 @@
 .. image:: https://travis-ci.org/badele/github-summary.png?branch=master
-        :target: https://travis-ci.org/badele/github-summary
+   :target: https://travis-ci.org/badele/github-summary
+
+
+.. image:: https://coveralls.io/repos/badele/github-summary/badge.png
+   :target: https://coveralls.io/r/badele/github-summary
+
 
 About
 =====
