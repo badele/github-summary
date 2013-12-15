@@ -19,7 +19,8 @@ ORGFILTER = r"#\+BEGIN: clocktable :maxlevel 2 :scope file(.*?)#\+END:"
 def convert(args):
     """Convert Orgfile to JSONfile"""
     times = extractTimes(args)
-    saveToJSON(args.saveto, times)
+    if times:
+        saveToJSON(args.saveto, times)
 
 
 def extractTimes(args):

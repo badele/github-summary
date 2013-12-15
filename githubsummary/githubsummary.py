@@ -109,34 +109,11 @@ def saveto(filename, content):
 
 def openJSONFile(filename):
     jsonfile = os.path.abspath(filename)
-    print "FILENAME: %s" % jsonfile
     if not os.path.isfile(jsonfile):
-        print "FILE NOT FOUND"
         return None
 
     f = open(jsonfile)
-
-    print "SIZE: %s" % os.path.getsize(jsonfile)
-
-    print "TYPE1: %s" % type(open)
-    print "TYPE2: %s" % type(f)
-    print "TYPE3: %s" % f.tell()
-    print "TYPE4: %s" % type(f.read())
-    print "TYPE5: %s" % f.tell()
-    f.seek(0)
-    print "RESULT: %s" % f.read()
-
-    f.seek(0)
-    print "JSON1: %s" % type(json)
-    print "JSON2: %s" % type(json.load(f))
-    print "JSON3: %s" % json.__version__
-    print "JSON4: %s" % repr(json)
-    f.seek(0)
-
     data = json.load(f)
-    f.seek(0)
-    print "DATA: %s" % data
-    print "CONTENT: %s" % f.read()
     return data
 
 
