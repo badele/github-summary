@@ -114,7 +114,9 @@ def openJSONFile(filename):
 
     json_data = open(jsonfile)
     data = json.load(json_data)
-    print data
+    print json_data.seek(0)
+    print "DATA: %s" % data
+    print "CONTENT: %s" % json_data.read()
     return data
 
 
