@@ -109,7 +109,9 @@ def saveto(filename, content):
 
 def openJSONFile(filename):
     jsonfile = os.path.abspath(filename)
+    print "FILENAME: %s" % jsonfile
     if not os.path.isfile(jsonfile):
+        print "FILE NOT FOUND"
         return None
 
     json_data = open(jsonfile)
