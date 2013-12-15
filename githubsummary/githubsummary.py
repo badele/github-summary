@@ -118,7 +118,8 @@ def openJSONFile(filename):
 
     print "TYPE1: %s" % type(open)
     print "TYPE2: %s" % type(open(jsonfile))
-    print "TYPE2: %s" % type(open(jsonfile).read())
+    print "TYPE3: %s" % type(open(jsonfile).read())
+    print "RESULT: %s" % open(jsonfile).read()
 
     print "JSON1: %s" % type(json)
     print "JSON2: %s" % type(json.load(json_data))
