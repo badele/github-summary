@@ -30,7 +30,7 @@ setup(
         'pygithub',
     ],
     setup_requires=[],
-    tests_require=[],
+    tests_require=['python-coveralls'],
     test_suite='tests',
     packages=find_packages(),
     include_package_data=True,
