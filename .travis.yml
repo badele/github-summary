@@ -8,7 +8,6 @@ install:
   - pip install -r requirements/test.txt
 
 script: 
-  - cat example_projects.json
   - make test
 
 after_success:
