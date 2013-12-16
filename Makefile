@@ -16,7 +16,7 @@ build:
 
 
 
-upload:
+deploy:
 	@echo 'Upload to PyPi'
 	@python setup.py sdist upload
 	@echo 'Done'

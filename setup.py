@@ -39,7 +39,7 @@ Remove unsupported github tags:
 
 setup(
     name='github-summary',
-    version='0.1.0-dev',
+    version='0.1.1',
     description='Python tool for generate github summary in multiple formats',
     long_description=rst('README.rst'),
     author='Bruno Adelé',

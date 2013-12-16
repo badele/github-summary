@@ -7,7 +7,7 @@ __description__ = """A tool to generate a
                   github summary in multiples formats
                    (TXT, Markdown, reStructuredText, HTML, etc ..."""
 __license__ = 'GPLv3'
-__version__ = '1.0'
+__version__ = '0.1.1'
 
 import os
 import sys
