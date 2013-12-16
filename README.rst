@@ -5,6 +5,13 @@
 .. image:: https://coveralls.io/repos/badele/github-summary/badge.png
    :target: https://coveralls.io/r/badele/github-summary
 
+.. image:: https://pypip.in/v/github-summary/badge.png
+   :target: https://crate.io/packages/github-summary/
+
+.. image:: https://pypip.in/d/github-summary/badge.png
+   :target: https://crate.io/packages/github-summary/
+
+
 
 About
 =====
@@ -41,7 +48,7 @@ You can also use the tools, ex: Emacs Org file to JSON file (projects contribute
 
    org2json -o project.org -s example_projects.json
 
-You can see a `example <https://github.com/badele/github-summary/blob/master/example.rst>`_ result or this picture
+You can see a `example <https://github.com/badele/github-summary/blob/master/example.rst>`_ result
 
 .. image:: http://bruno.adele.im/static/github-summary.png
 

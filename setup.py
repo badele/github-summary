@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
+import re
 
 try:
     from setuptools import setup, find_packages
@@ -10,17 +10,38 @@ except ImportError:
     use_setuptools()
     from setuptools import setup, find_packages
 
+PYPI_RST_FILTERS = (
+    # Replace code-blocks
+    (r'\.\.\s? code-block::\s*(\w|\+)+', '::'),
+    # Replace image
+    (r'\.\.\s? image::.*', ''),
+    # Remove travis ci badge
+    (r'.*travis-ci\.org/.*', ''),
+    # Remove pypip.in badges
+    (r'.*pypip\.in/.*', ''),
+    (r'.*crate\.io/.*', ''),
+    (r'.*coveralls\.io/.*', ''),
+)
 
-def read(filename):
-    path = os.path.join(os.path.dirname(__file__), filename)
-    return open(path).read()
+
+def rst(filename):
+    '''
+Load rst file and sanitize it for PyPI.
+Remove unsupported github tags:
+- code-block directive
+- travis ci build badge
+'''
+    content = open(filename).read()
+    for regex, replacement in PYPI_RST_FILTERS:
+        content = re.sub(regex, replacement, content)
+    return content
 
 
 setup(
     name='github-summary',
     version='0.1.0-dev',
     description='Python tool for generate github summary in multiple formats',
-    long_description=read('README.rst'),
+    long_description=rst('README.rst'),
     author='Bruno Adelé',
     author_email='bruno@adele.im',
     url='https://github.com/badele/github-summary',

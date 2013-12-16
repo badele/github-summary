@@ -3,16 +3,7 @@ DISTDIR=$(BASEDIR)/dist
 BUILDDIR=$(BASEDIR)/build
 PACKAGE='githubsummary'
 
-help:
-	@echo 'Makefile for github-summary'
-	@echo '                                                                     '
-	@echo 'Usage:                                                               '
-	@echo '   make doc              Generate sample & doc                       '
-	@echo '   make dist             Generate a distributable package            '
-	@echo '   make test             Unittest                                    '
-	@echo '   make clean            Remove all temporary and generated artifacts'
-	@echo '   make install          Install package                             '
-	@echo '                                                                     '
+test: jsonfile pep8 coverage
 
 doc:
 	@echo 'Generating a example documentation'
@@ -24,6 +15,12 @@ build:
 	@python setup.py build
 
 
+
+upload:
+	@echo 'Upload to PyPi'
+	@python setup.py sdist upload
+	@echo 'Done'
+
 dist:
 	@echo 'Generating a distributable python package'
 	@python setup.py sdist
@@ -33,7 +30,6 @@ install:
 	@echo 'Running install'
 	@python setup.py install
 
-test: jsonfile pep8 coverage
 
 jsonfile:
 	@echo 'Running test suite'
