@@ -13,6 +13,7 @@ import sys
 import json
 import argparse
 
+
 ORGFILTER = r"#\+BEGIN: clocktable :maxlevel 2 :scope file(.*?)#\+END:"
 
 
@@ -20,7 +21,9 @@ def convert(args):
     """Convert Orgfile to JSONfile"""
     times = extractTimes(args)
     if times:
-        saveToJSON(args.saveto, times)
+        jsonorig = openJSON(args.saveto)
+        jsontosave = dict (jsonorig.items() + times.items())
+        saveJSON(args.saveto, jsontosave)
 
 
 def extractTimes(args):
@@ -38,12 +41,21 @@ def extractTimes(args):
         matchall = re.findall(r'\\__ ([^ ]+) +\| +\| +([0-9]+):[0-9]+ \|', projects)
         if matchall:
             for m in matchall:
-                times[m[0]] = m[1]
+                times[m[0]] = {'hours': m[1]}
 
         return times
 
 
-def saveToJSON(filename, datas):
+def openJSON(filename):
+    """Open JSON"""
+    if not os.path.isfile(filename):
+        return dict()
+
+    f = open(filename)
+    return json.load(f)
+
+
+def saveJSON(filename, datas):
     """Save array to JSON"""
     jsondatas = json.dumps(datas, indent=4)
     out = open(filename, 'wb')

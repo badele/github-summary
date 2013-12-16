@@ -51,13 +51,14 @@ def generateSummary(args):
         print "%s template not found" % tplfile
         sys.exit(1)
 
-    # Clocktable
-    clocktable = None
     total_contribute = 0
+    jsonfile = {}
     if args.jsonfile:
-        clocktable = openJSONFile(args.jsonfile)
-        for key, value in clocktable.iteritems():
-            total_contribute += int(value)
+        jsonfile = openJSONFile(args.jsonfile)
+
+        # Clocktable
+        for key, value in jsonfile.iteritems():
+            total_contribute += int(value['hours'])
 
     # Create github instance
     g = Github(GITHUB_TOKEN)
@@ -93,7 +94,7 @@ def generateSummary(args):
             'reposlanguages': reposlanguages,
             'ownerlanguages': ownerlanguages,
             'contriblanguages': contriblanguages,
-            'clocktable': clocktable,
+            'jsonfile': jsonfile,
             'total_contribute': total_contribute,
         }
     )

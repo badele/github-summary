@@ -1,13 +1,35 @@
 {
-    "fabrecipes": "89", 
-    "jesuislibre": "16", 
-    "JobCatcher": "108", 
-    "surlacarte": "44", 
-    "gitcheck": "15", 
-    "github-summary": "22", 
-    "Archlinux": "0", 
-    "cacause": "51", 
-    "fabtools": "29", 
-    "home": "0", 
-    "informemoi": "7"
+    "fabrecipes": {
+        "hours": "89"
+    }, 
+    "jesuislibre": {
+        "hours": "16"
+    }, 
+    "JobCatcher": {
+        "hours": "108"
+    }, 
+    "surlacarte": {
+        "hours": "44"
+    }, 
+    "gitcheck": {
+        "hours": "15"
+    }, 
+    "fabtools": {
+        "hours": "29"
+    }, 
+    "Archlinux": {
+        "hours": "0"
+    }, 
+    "cacause": {
+        "hours": "51"
+    }, 
+    "github-summary": {
+        "hours": "22"
+    }, 
+    "home": {
+        "hours": "0"
+    }, 
+    "informemoi": {
+        "hours": "7"
+    }
 }

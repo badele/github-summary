@@ -35,12 +35,12 @@ My sites
 My contributions
 -----------------
 {% for repo in contrib %}
-- `{{ repo.name }}`_ {% if clocktable[repo.name] %}contribute **{{ clocktable[repo.name]}} hours** {% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
+- `{{ repo.name }}`_ {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}contribute **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
 
 My projects
 -----------
 {% for repo in owner %}
-- `{{ repo.name }}`_ {% if clocktable[repo.name] %}contribute **{{ clocktable[repo.name]}} hours** {% endif %}{% if repo.watchers or repo.forks %}({% if repo.watchers > 0 %}{{ repo.watchers }} users{% endif %}{% if repo.forks > 0 %}, {{ repo.forks }} forks{% endif %}){% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
+- `{{ repo.name }}`_ {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}contribute **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.watchers or repo.forks %}({% if repo.watchers > 0 %}{{ repo.watchers }} users{% endif %}{% if repo.forks > 0 %}, {{ repo.forks }} forks{% endif %}){% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
 
 **Languages repartitions:** {% for key, value in reposlanguages.iteritems() %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
 
