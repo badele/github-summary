@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import re
+from githubsummary import githubsummary
 
 try:
     from setuptools import setup, find_packages
@@ -39,7 +40,7 @@ Remove unsupported github tags:
 
 setup(
     name='github-summary',
-    version='0.1.1',
+    version=githubsummary.__version__,
     description='Python tool for generate github summary in multiple formats',
     long_description=rst('README.rst'),
     author='Bruno Adelé',

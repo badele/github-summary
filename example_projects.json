@@ -1,21 +1,26 @@
 {
     "fabrecipes": {
-        "hours": "89"
+        "hours": "89",
+        "description" : "Permet d'automatiser vos tâches, comme par exemple une installation automatique d'une distribution Archlinux."
     }, 
     "jesuislibre": {
         "hours": "16"
     }, 
     "JobCatcher": {
-        "hours": "108"
+        "hours": "108",
+        "description": "JobCatcher est une application codée en Python qui agrège des flux d'offres d'emploi de job boards et les stocke dans une base de données locale."
     }, 
     "surlacarte": {
         "hours": "44"
     }, 
     "gitcheck": {
-        "hours": "15"
+        "hours": "15",
+        "url": "http://bruno.adele.im/projets/gitcheck",
+        "description": "Lorsque vous travaillez sur plusieurs dépots git, il est désagréable de devoir parcourir chaque projet un à un pour voir si des modifications ont été commitées. C'est pour cela que j'ai crée ce script qui permet de savoir quels sont les projets non commités."
     }, 
     "fabtools": {
-        "hours": "29"
+        "hours": "29",
+        "description" : "Outil pour simplifier l'écriture de script fabtools"
     }, 
     "Archlinux": {
         "hours": "0"
@@ -24,7 +29,12 @@
         "hours": "51"
     }, 
     "github-summary": {
-        "hours": "22"
+        "hours": "22",
+        "travis": "True",
+        "coveralls": "True",
+        "pypi": "True",
+        "pydownload": "True",
+        "description": "Permet de générer des pages résumant l'activité sur vos dépots github, il est possible d'exporter sous différents formats (TXT, RST, HTML, ...)"
     }, 
     "home": {
         "hours": "0"
