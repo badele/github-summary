@@ -53,3 +53,4 @@ You can see a `example <https://github.com/badele/github-summary/blob/master/exa
 .. image:: http://bruno.adele.im/static/github-summary.png
 
 You can also see the result directely in my personnal `website <http://bruno.adele.im>`_ 
+

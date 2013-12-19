@@ -41,7 +41,7 @@ setup(
     name='github-summary',
     version='0.1.2',
     description='Python tool for generate github summary in multiple formats',
-    long_description=rst('README.rst'),
+    long_description=rst('README.rst') + rst('CHANGELOG.txt'),
     author='Bruno Adelé',
     author_email='bruno@adele.im',
     url='https://github.com/badele/github-summary',

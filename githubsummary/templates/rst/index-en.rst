@@ -35,14 +35,17 @@ My sites
 My contributions
 -----------------
 {% for repo in contrib %}
-- `{{ repo.name }}`_ {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}contribute **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
+- `{{ repo.name }}`_ {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}contribute **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.parent.watchers or repo.parent.forks %}({% if repo.parent.watchers > 0 %}{{ repo.parent.watchers }} users{% endif %}{% if repo.parent.forks > 0 %}, {{ repo.parent.forks }} forks{% endif %}){% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
 
 My projects
 -----------
 {% for repo in owner %}
 - `{{ repo.name }}`_ {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}contribute **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.watchers or repo.forks %}({% if repo.watchers > 0 %}{{ repo.watchers }} users{% endif %}{% if repo.forks > 0 %}, {{ repo.forks }} forks{% endif %}){% endif %}{% if repo.description %}/ {{ repo.description }}{% endif %}{% endfor %}
 
-**Languages repartitions:** {% for key, value in reposlanguages.iteritems() %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
+**Languages repartitions:** {% for key, value in reposlanguages.items()[:5] %}{{ key|e }} ({{ value|e }}%){% if not loop.last %}, {% endif %}{% endfor %}
+
+.. image:: https://chart.googleapis.com/chart?cht=p3&chs=300x90&chd=t:{% for key, value in reposlanguages.items()[:5] %}{{ value }}{% if not loop.last %},{% endif%}{% endfor %}&chl={% for key, value in reposlanguages.items()[:5] %}{{ key }}{% if not loop.last %}|{% endif%}{% endfor %}&chco=2669ad
+    :alt: Languages graphs
 
 This page is generated with `github-summary`_ project
 

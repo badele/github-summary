@@ -5,7 +5,7 @@ PACKAGE='githubsummary'
 
 test: jsonfile pep8 coverage
 
-doc:
+prebuild:
 	@echo 'Generating a example documentation'
 	@./githubsummary/tools/org2json -o /LIVE/documents/project.org -s ./example_projects.json
 	@./githubsummary/githubsummary.py -t rst/index-en.rst -j ./example_projects.json -s ./example.rst
@@ -32,7 +32,7 @@ install:
 
 
 jsonfile:
-	@echo 'Running test suite'
+	@echo 'Generate JSON file from Org'
 	@./githubsummary/tools/org2json -o /LIVE/documents/project.org -s ./example_projects.json
 
 pep8:

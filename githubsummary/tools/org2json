@@ -21,9 +21,16 @@ def convert(args):
     """Convert Orgfile to JSONfile"""
     times = extractTimes(args)
     if times:
+        # Try to open already exist json file
         jsonorig = openJSON(args.saveto)
-        jsontosave = dict (jsonorig.items() + times.items())
-        saveJSON(args.saveto, jsontosave)
+
+        for key, value in times.iteritems():
+            if key not in jsonorig:
+                jsonorig[key] = {key: value['hours']}
+            else:
+                jsonorig[key]['hours'] = value['hours']           
+
+            saveJSON(args.saveto, jsonorig)
 
 
 def extractTimes(args):

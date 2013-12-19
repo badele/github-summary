@@ -13,7 +13,7 @@ Self-taught, I learned various technology to guide me to the managements systems
 
 My strength, being constantly listen technologies evolutions and use a technologies will be apport a simplicity and max performances. 
 
-I also love the Opensource Software, in the last time, i have contributed **381 hours**.
+I also love the Opensource Software, in the last time, i have contributed **389 hours**.
 
 My blogs
 ---------
@@ -35,24 +35,24 @@ My sites
 My contributions
 -----------------
 
-- `JobCatcher`_ contribute **108 hours** 
-- `rstblog`_ / NIH site generator
-- `pelican-plugins`_ / A bunch of plugins for the pelican blog engine.
-- `fabtools`_ contribute **29 hours** / Tools for writing awesome Fabric files
-- `pelican-themes`_ / Themes for pelican
-- `archzfs`_ / Package and repository sources for ZFS on Arch Linux
-- `python-munin`_ / Python framework for building Munin plugins (also includes some plugins prebuilt).
-- `urwid`_ / Console user interface library for Python (hg-git clone for git-fans)
+- `JobCatcher`_ contribute **108 hours** (8 users, 5 forks)
+- `rstblog`_ (180 users, 58 forks)/ NIH site generator
+- `pelican-plugins`_ (114 users, 126 forks)/ A bunch of plugins for the pelican blog engine.
+- `fabtools`_ contribute **29 hours** (560 users, 118 forks)/ Tools for writing awesome Fabric files
+- `pelican-themes`_ (309 users, 242 forks)/ Themes for pelican
+- `archzfs`_ (11 users, 2 forks)/ Package and repository sources for ZFS on Arch Linux
+- `python-munin`_ (216 users, 45 forks)/ Python framework for building Munin plugins (also includes some plugins prebuilt).
+- `urwid`_ (152 users, 41 forks)/ Console user interface library for Python (hg-git clone for git-fans)
 
 My projects
 -----------
 
 - `gitcheck`_ contribute **15 hours** (25 users, 6 forks)/ Check multiple git repository in one pass / Vérifiez vos dépôt git en une seule passe
-- `JobCatcher`_ contribute **108 hours** (8 users, 4 forks)
+- `JobCatcher`_ contribute **108 hours** (8 users, 5 forks)
 - `fabrecipes`_ contribute **89 hours** (5 users, 1 forks)/ A recipes for Fabric & Fabtools
 - `garchdeps`_ (3 users)/ Tool that show graphical dependencies of the archlinux packages
-- `github-summary`_ contribute **22 hours** / Python tool for generate github summary in multiple formats
 - `bruno.adele.im`_ / code du site web bruno.adele.im
+- `github-summary`_ contribute **30 hours** / Python tool for generate github summary in multiple formats
 - `blog.jesuislibre.org`_ / source du blog jesuislibre.org
 - `pelican-theme-jesuislibre`_ / jesuislibre pelican theme
 - `pelicanthemes-generator`_ / pelican theme screenshot generator
@@ -61,8 +61,11 @@ My projects
 - `fdedup`_ / Find a duplicate files and delete or move
 - `jsl-tools`_ / Diverse tools from jesuislibre website
 
-**Languages repartitions:** Python (44%), Shell (22%), CSS (14%), JavaScript (8%), Emacs Lisp (3%), C++ (3%), Perl (3%), Ruby (3%)
+**Languages repartitions:** Python (44%), Shell (22%), CSS (14%), JavaScript (8%), Emacs Lisp (3%)
 
+.. image:: https://chart.googleapis.com/chart?cht=p3&chs=300x90&chd=t:44,22,14,8,3&chl=Python|Shell|CSS|JavaScript|Emacs Lisp&chco=2669ad
+    :alt: Ma photo
+    :align: right
 This page is generated with `github-summary`_ project
 
 Contact me
@@ -84,8 +87,8 @@ Contact me
 .. _jobcatcher: https://github.com/badele/jobcatcher
 .. _fabrecipes: https://github.com/badele/fabrecipes
 .. _garchdeps: https://github.com/badele/garchdeps
-.. _github-summary: https://github.com/badele/github-summary
 .. _bruno.adele.im: https://github.com/badele/bruno.adele.im
+.. _github-summary: https://github.com/badele/github-summary
 .. _blog.jesuislibre.org: https://github.com/badele/blog.jesuislibre.org
 .. _pelican-theme-jesuislibre: https://github.com/badele/pelican-theme-jesuislibre
 .. _pelicanthemes-generator: https://github.com/badele/pelicanthemes-generator
