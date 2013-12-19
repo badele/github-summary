@@ -36,7 +36,7 @@ To install the latest development version from `GitHub <https://github.com/badel
 Utilization
 ===========
 
-Normally, just run this command for generate a ``github-summary`` in RST format
+Modify ``~/.github-summary.py`` or ``config.py``, for security reason, it is preferable modify ``~/.github-summary.py``
 
 .. code-block:: bash
 
