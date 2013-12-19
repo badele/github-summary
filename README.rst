@@ -5,10 +5,10 @@
 .. image:: https://coveralls.io/repos/badele/github-summary/badge.png
    :target: https://coveralls.io/r/badele/github-summary
 
-.. image:: https://pypip.in/v/github-summary/badge.png
+.. disableimage:: https://pypip.in/v/github-summary/badge.png
    :target: https://crate.io/packages/github-summary/
 
-.. image:: https://pypip.in/d/github-summary/badge.png
+.. disableimage:: https://pypip.in/d/github-summary/badge.png
    :target: https://crate.io/packages/github-summary/
 
 
@@ -16,7 +16,7 @@
 About
 =====
 
-``github-summary`` Python tool for generate github summary in multiple formats. It can generate a github summary in multiple formats (RST, TXT, HTML, etc ...)
+``github-summary`` is a python tool for generate github summary in multiple formats. It can generate a github summary in multiple formats (RST, TXT, HTML, etc ...)
 
 Installing
 ==========
@@ -33,22 +33,54 @@ To install the latest development version from `GitHub <https://github.com/badel
 
     $ pip install git+git://github.com/badele/github-summary.git
 
-Example
-=======
+Utilization
+===========
 
-Here is an example commands using ``github-summary``
+Normally, just run this command for generate a ``github-summary`` in RST format
 
-.. code-block:: python
+.. code-block:: bash
 
 	githubsummary -t rst/index-en.rst -j example_projects.json -s example.rst
 
-You can also use the tools, ex: Emacs Org file to JSON file (projects contributed time)
+Options
+-------
 
-.. code-block:: python
+You can configure options by projects, options is stored in JSON format. Here an exemple of JSON options
+
+.. code-block:: JSON
+
+   {
+    "fabrecipes": {
+        "hours": "89", 
+        "description": "A overwriting description text for fabrecipe."
+    }, 
+    "JobCatcher": {
+        "hours": "108", 
+        "description": "Another overwriting description text for JobCatcher."
+    }, 
+    "gitcheck": {
+        "hours": "15", 
+        "url": "http://bruno.adele.im/projets/gitcheck", 
+        "description": "Check multiple git repository in one pass."
+    }, 
+    "github-summary": {
+        "coveralls": "True", 
+        "description": "Python tool for generate github summary in multiple formats (TXT, RST, HTML, ...)", 
+        "pypi": "True", 
+        "pydownload": "True", 
+        "hours": "30", 
+        "travis": "True"
+    }
+   }
+
+
+You can also use the externals tools for populate the JSON file. Ex: Emacs Org file to JSON file (projects contributed time)
+
+.. code-block:: bash
 
    org2json -o project.org -s example_projects.json
 
-You can see a `example <https://github.com/badele/github-summary/blob/master/example.rst>`_ result
+You can see the generated `example <https://github.com/badele/github-summary/blob/master/example.rst>`_ in RST format
 
 .. image:: http://bruno.adele.im/static/github-summary.png
 
