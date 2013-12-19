@@ -36,7 +36,7 @@ To install the latest development version from `GitHub <https://github.com/badel
 Utilization
 ===========
 
-Modify ``~/.github-summary.py`` or ``config.py``, for security reason, it is preferable modify ``~/.github-summary.py``
+Modify ``~/.github-summary.py`` or ``config.py``, for security reason, it is preferable modify ``~/.github-summary.py`` and execute command
 
 .. code-block:: bash
 
