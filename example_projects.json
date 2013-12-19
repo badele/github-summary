@@ -1,45 +1,23 @@
 {
     "fabrecipes": {
         "hours": "89", 
-        "description": "Permet d'automatiser vos t\u00e2ches, comme par exemple une installation automatique d'une distribution Archlinux."
-    }, 
-    "jesuislibre": {
-        "hours": "16"
+        "description": "A overwriting description text for fabrecipe."
     }, 
     "JobCatcher": {
         "hours": "108", 
-        "description": "JobCatcher est une application cod\u00e9e en Python qui agr\u00e8ge des flux d'offres d'emploi de job boards et les stocke dans une base de donn\u00e9es locale."
-    }, 
-    "surlacarte": {
-        "hours": "44"
+        "description": "Another overwriting description text for JobCatcher."
     }, 
     "gitcheck": {
         "hours": "15", 
         "url": "http://bruno.adele.im/projets/gitcheck", 
-        "description": "Lorsque vous travaillez sur plusieurs d\u00e9pots git, il est d\u00e9sagr\u00e9able de devoir parcourir chaque projet un \u00e0 un pour voir si des modifications ont \u00e9t\u00e9 commit\u00e9es. C'est pour cela que j'ai cr\u00e9e ce script qui permet de savoir quels sont les projets non commit\u00e9s."
-    }, 
-    "fabtools": {
-        "hours": "29", 
-        "description": "Outil pour simplifier l'\u00e9criture de script fabtools"
-    }, 
-    "Archlinux": {
-        "hours": "0"
-    }, 
-    "cacause": {
-        "hours": "51"
+        "description": "Check multiple git repository in one pass."
     }, 
     "github-summary": {
         "coveralls": "True", 
-        "description": "Permet de g\u00e9n\u00e9rer des pages r\u00e9sumant l'activit\u00e9 sur vos d\u00e9pots github, il est possible d'exporter sous diff\u00e9rents formats (TXT, RST, HTML, ...)", 
+        "description": "Python tool for generate github summary in multiple formats (TXT, RST, HTML, ...)", 
         "pypi": "True", 
         "pydownload": "True", 
         "hours": "30", 
         "travis": "True"
-    }, 
-    "home": {
-        "hours": "0"
-    }, 
-    "informemoi": {
-        "hours": "7"
     }
 }
