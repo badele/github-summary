@@ -51,7 +51,7 @@ Cette page a été générée avec le projet `github-summary`_
 Me contacter
 ------------
 
-:Email: bruno.adele@jesuislibre.org
+:Email: bruno@adele.im
 :Twitter: https://twitter.com/jesuislibre
 :Google+: https://plus.google.com/100723270029692582967
 :Facebook: https://www.facebook.com/bruno.adele

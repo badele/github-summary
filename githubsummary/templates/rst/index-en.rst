@@ -52,7 +52,7 @@ This page is generated with `github-summary`_ project
 Contact me
 ----------
 
-:Email: bruno.adele@jesuislibre.org
+:Email: bruno@adele.im
 :Twitter: https://twitter.com/jesuislibre
 :Google+: https://plus.google.com/100723270029692582967
 :Facebook: https://www.facebook.com/bruno.adele
