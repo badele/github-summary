@@ -13,7 +13,7 @@ Self-taught, I learned various technology to guide me to the managements systems
 
 My strength, being constantly listen technologies evolutions and use a technologies will be apport a simplicity and max performances. 
 
-I also love the Opensource Software, in the last time, i have contributed **389 hours**.
+I also love the Opensource Software, in the last time, i have contributed **391 hours**.
 
 My blogs
 ---------
@@ -41,7 +41,7 @@ My contributions
 - `fabtools`_ contribute **29 hours** (560 users, 118 forks)/ Tools for writing awesome Fabric files
 - `pelican-themes`_ (309 users, 242 forks)/ Themes for pelican
 - `archzfs`_ (11 users, 2 forks)/ Package and repository sources for ZFS on Arch Linux
-- `python-munin`_ (216 users, 45 forks)/ Python framework for building Munin plugins (also includes some plugins prebuilt).
+- `python-munin`_ (217 users, 45 forks)/ Python framework for building Munin plugins (also includes some plugins prebuilt).
 - `urwid`_ (152 users, 41 forks)/ Console user interface library for Python (hg-git clone for git-fans)
 
 My projects
@@ -51,8 +51,8 @@ My projects
 - `JobCatcher`_ contribute **108 hours** (8 users, 5 forks)
 - `fabrecipes`_ contribute **89 hours** (5 users, 1 forks)/ A recipes for Fabric & Fabtools
 - `garchdeps`_ (3 users)/ Tool that show graphical dependencies of the archlinux packages
+- `github-summary`_ contribute **32 hours** / Python tool for generate github summary in multiple formats
 - `bruno.adele.im`_ / code du site web bruno.adele.im
-- `github-summary`_ contribute **30 hours** / Python tool for generate github summary in multiple formats
 - `blog.jesuislibre.org`_ / source du blog jesuislibre.org
 - `pelican-theme-jesuislibre`_ / jesuislibre pelican theme
 - `pelicanthemes-generator`_ / pelican theme screenshot generator
@@ -64,14 +64,14 @@ My projects
 **Languages repartitions:** Python (44%), Shell (22%), CSS (14%), JavaScript (8%), Emacs Lisp (3%)
 
 .. image:: https://chart.googleapis.com/chart?cht=p3&chs=300x90&chd=t:44,22,14,8,3&chl=Python|Shell|CSS|JavaScript|Emacs Lisp&chco=2669ad
-    :alt: Ma photo
-    :align: right
+    :alt: Languages graphs
+
 This page is generated with `github-summary`_ project
 
 Contact me
 ----------
 
-:Email: bruno.adele@jesuislibre.org
+:Email: bruno@adele.im
 :Twitter: https://twitter.com/jesuislibre
 :Google+: https://plus.google.com/100723270029692582967
 :Facebook: https://www.facebook.com/bruno.adele
@@ -87,8 +87,8 @@ Contact me
 .. _jobcatcher: https://github.com/badele/jobcatcher
 .. _fabrecipes: https://github.com/badele/fabrecipes
 .. _garchdeps: https://github.com/badele/garchdeps
-.. _bruno.adele.im: https://github.com/badele/bruno.adele.im
 .. _github-summary: https://github.com/badele/github-summary
+.. _bruno.adele.im: https://github.com/badele/bruno.adele.im
 .. _blog.jesuislibre.org: https://github.com/badele/blog.jesuislibre.org
 .. _pelican-theme-jesuislibre: https://github.com/badele/pelican-theme-jesuislibre
 .. _pelicanthemes-generator: https://github.com/badele/pelicanthemes-generator

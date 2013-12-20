@@ -58,7 +58,8 @@ def generateSummary(args):
 
         # Clocktable
         for key, value in jsonfile.iteritems():
-            total_contribute += int(value['hours'])
+            if 'hours' in value:
+                total_contribute += int(value['hours'])
 
     # Create github instance
     g = Github(GITHUB_TOKEN)

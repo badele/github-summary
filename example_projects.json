@@ -3,9 +3,15 @@
         "hours": "89", 
         "description": "A overwriting description text for fabrecipe."
     }, 
+    "jesuislibre": {
+        "hours": "16"
+    }, 
     "JobCatcher": {
         "hours": "108", 
         "description": "Another overwriting description text for JobCatcher."
+    }, 
+    "surlacarte": {
+        "hours": "44"
     }, 
     "gitcheck": {
         "hours": "15", 
@@ -17,7 +23,22 @@
         "description": "Python tool for generate github summary in multiple formats (TXT, RST, HTML, ...)", 
         "pypi": "True", 
         "pydownload": "True", 
-        "hours": "30", 
+        "hours": "32", 
         "travis": "True"
+    }, 
+    "Archlinux": {
+        "hours": "0"
+    }, 
+    "cacause": {
+        "hours": "51"
+    }, 
+    "fabtools": {
+        "hours": "29"
+    }, 
+    "home": {
+        "hours": "0"
+    }, 
+    "informemoi": {
+        "hours": "7"
     }
 }

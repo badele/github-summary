@@ -43,7 +43,7 @@ Modify ``~/.github-summary.py`` or ``config.py``, for security reason, it is pre
 	githubsummary -t rst/index-en.rst -j example_projects.json -s example.rst
 
 Options
--------
+=======
 
 You can configure options by projects, options is stored in JSON format. Here an exemple of JSON options
 

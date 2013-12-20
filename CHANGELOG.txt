@@ -1,8 +1,7 @@
 Changelog
 =========
 
-
-Version 0.1.2 (2013-12-19)
+Version 0.1.2 (2013-12-20)
 --------------------------
 
 * Add graph languages repartions
@@ -12,6 +11,6 @@ Version 0.1.2 (2013-12-19)
 * Change JSON format
 
 Version 0.1.1 (2013-12-16)
-------------------------
+--------------------------
 
 * First version
