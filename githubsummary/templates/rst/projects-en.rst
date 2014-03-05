@@ -13,8 +13,8 @@ My projects
 -----------
 
 {% for repo in owner %}
-`{{ repo.name }} <{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{jsonfile[repo.name]['url']}}{% else %}{{ repo.url }}{% endif %}>`__ 
-{{'-' * repo.name|length }}{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{'-' * jsonfile[repo.name]['url']|length }}{% else %}{{ '-' * repo.url|length }}{% endif %}{{'-' * repo.n|length }}-------
+`{{ repo.name }} <{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{jsonfile[repo.name]['url']}}{% else %}{{ repo.html_url }}{% endif %}>`__
+{{'-' * repo.name|length }}{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{'-' * jsonfile[repo.name]['url']|length }}{% else %}{{ '-' * repo.html_url|length }}{% endif %}{{'-' * repo.n|length }}-------
 
 {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}a contribué **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.watchers or repo.forks %}({% if repo.watchers > 0 %}{{ repo.watchers }} utilisateurs{% endif %}{% if repo.forks > 0 %}, {{ repo.forks }} forks{% endif %}){% endif %}
 
@@ -43,8 +43,8 @@ My contributes
 --------------
 
 {% for repo in contrib %}
-`{{ repo.name }} <{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{jsonfile[repo.name]['url']}}{% else %}{{ repo.url }}{% endif %}>`__ 
-{{'-' * repo.name|length }}{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{'-' * jsonfile[repo.name]['url']|length }}{% else %}{{ '-' * repo.url|length }}{% endif %}{{'-' * repo.n|length }}-------
+`{{ repo.name }} <{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{jsonfile[repo.name]['url']}}{% else %}{{ repo.html_url }}{% endif %}>`__
+{{'-' * repo.name|length }}{% if jsonfile[repo.name] and jsonfile[repo.name]['url']%}{{'-' * jsonfile[repo.name]['url']|length }}{% else %}{{ '-' * repo.html_url|length }}{% endif %}{{'-' * repo.n|length }}-------
 
 {% if jsonfile[repo.name] and jsonfile[repo.name]['hours'] %}a contribué **{{ jsonfile[repo.name]['hours']}} hours** {% endif %}{% if repo.parent.watchers or repo.parent.forks %}({% if repo.parent.watchers > 0 %}{{ repo.parent.watchers }} utilisateurs{% endif %}{% if repo.parent.forks > 0 %}, {{ repo.parent.forks }} forks{% endif %}){% endif %}
 
