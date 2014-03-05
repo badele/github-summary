@@ -26,11 +26,11 @@ def convert(args):
 
         for key, value in times.iteritems():
             if key not in jsonorig:
-                jsonorig[key] = {key: value['hours']}
+                jsonorig[key] = {'hours': value['hours']}
             else:
                 jsonorig[key]['hours'] = value['hours']           
 
-            saveJSON(args.saveto, jsonorig)
+        saveJSON(args.saveto, jsonorig)
 
 
 def extractTimes(args):
