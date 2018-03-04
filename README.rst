@@ -5,10 +5,10 @@
 .. image:: https://coveralls.io/repos/badele/github-summary/badge.png
    :target: https://coveralls.io/r/badele/github-summary
 
-.. disableimage:: https://pypip.in/v/github-summary/badge.png
+.. disableimage:: https://img.shields.io/pypi/v/github-summary.svg
    :target: https://crate.io/packages/github-summary/
 
-.. disableimage:: https://pypip.in/d/github-summary/badge.png
+.. disableimage:: https://img.shields.io/pypi/dm/github-summary.svg
    :target: https://crate.io/packages/github-summary/
 
 
